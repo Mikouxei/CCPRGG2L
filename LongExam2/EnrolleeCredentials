@@ -52,6 +52,7 @@ public class EnrolleeCredentials extends EnrolmentForm {
 		this.studentType = studentType;
 	}
 	
+  // Returns the tuition fee that correspond to the course
 	public static int tuitionFees(String courseName, int tuitionFee) {
 		tuitionFee = 0;
 		String courseOffered = courseName.toUpperCase();
@@ -77,6 +78,7 @@ public class EnrolleeCredentials extends EnrolmentForm {
 		return tuitionFee;
 	}
 	
+  // Returns the miscellaneous fee that correspond to the course
 	public static int miscellaneousFees(String course, int miscellaneuosFee) {
 		miscellaneuosFee = 0;
 		String courseOffered = course;
@@ -102,6 +104,7 @@ public class EnrolleeCredentials extends EnrolmentForm {
 		return miscellaneuosFee;
 	}
 	
+  // Returns the Total Fees payable based on Student Type
 	public static int totalFees (String studentType, String course, int tuitionFee, int miscellaneuosFee) {
 		double totalFee = 0;
 		double tf = tuitionFees(course, tuitionFee);
