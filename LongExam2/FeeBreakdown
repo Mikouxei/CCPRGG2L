@@ -209,3 +209,4 @@ public class FeeBreakdown {
 		btnClearContents.setBounds(193, 354, 85, 21);
 		frame.getContentPane().add(btnClearContents);
 	}
+}
