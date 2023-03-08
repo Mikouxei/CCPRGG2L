@@ -39,10 +39,11 @@ public class EnrolmentForm {
 	private JTextField textIDNumber;
 	private static String[] coursesOffered = {"Select Course", "Tourism","Computer Science", "Engineering", "Nursing", "Architecture"};
 	private static String[] studentType = {"Select Student Type", "Discounted (GOLD)","Discounted (BLUE)", "Discounted (WHITE)", "Walk-in", "Continuing"};
-	private String comboStudentType;
-	private String comboCourseName;
+	private String comboStudentType = "";
+	private String comboCourseName = "";
 	private JTable table;
 	private int totalPayableFee;
+	
 	
 	/**
 	 * Launch the application.
@@ -53,6 +54,7 @@ public class EnrolmentForm {
 				try {
 					EnrolmentForm window = new EnrolmentForm();
 					window.frame.setVisible(true);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -76,8 +78,11 @@ public class EnrolmentForm {
 		frame.setBackground(Color.WHITE);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		// Created Object Array to be used as column header for JTable
 		Object[] columns = {"First Name", "Last Name", "Student ID", "Course", "Student Type", "Tot. Fees (in Php)"};
+		// Created DefaultTableModel class to set JTable and store the cell value objects
 		DefaultTableModel model = new DefaultTableModel();
+		// Sets the array object "columns" as header for the JTable
 		model.setColumnIdentifiers(columns);
 		
 		JLabel lblEnrollmentForm = new JLabel("Enrollment Form", SwingConstants.CENTER);
@@ -96,6 +101,7 @@ public class EnrolmentForm {
 		textFirstName = new JTextField();
 		textFirstName.addFocusListener(new FocusAdapter() {
 			@Override
+			// When focus is gained, sets the textfield as blank
 			public void focusGained(FocusEvent e) {
 				if (textFirstName.getText().equals("First Name")) {
 					textFirstName.setText("");
@@ -103,6 +109,7 @@ public class EnrolmentForm {
 			}
 			
 			@Override
+			 // When focus is lost, sets the textfield to its default text
 			public void focusLost(FocusEvent e) {
 				if (textFirstName.getText().equals("")) {
 					textFirstName.setText("First Name");
@@ -126,6 +133,7 @@ public class EnrolmentForm {
 		textLastName = new JTextField();
 		textLastName.addFocusListener(new FocusAdapter() {
 			@Override
+			// When focus is gained, sets the textfield as blank
 			public void focusGained(FocusEvent e) {
 				if (textLastName.getText().equals("Last Name")) {
 					textLastName.setText("");
@@ -133,6 +141,7 @@ public class EnrolmentForm {
 			}
 			
 			@Override
+			 // When focus is lost, sets the textfield to its default text
 			public void focusLost(FocusEvent e) {
 				if (textLastName.getText().equals("")) {
 					textLastName.setText("Last Name");
@@ -156,6 +165,7 @@ public class EnrolmentForm {
 		textIDNumber = new JTextField();
 		textIDNumber.addFocusListener(new FocusAdapter() {
 			@Override
+			// When focus is gained, sets the textfield as blank
 			public void focusGained(FocusEvent e) {
 				if (textIDNumber.getText().equals("ID Number")) {
 					textIDNumber.setText("");
@@ -163,6 +173,7 @@ public class EnrolmentForm {
 			}
 			
 			@Override
+			// When focus is lost, sets the textfield to its default text
 			public void focusLost(FocusEvent e) {
 				if (textIDNumber.getText().equals("")) {
 					textIDNumber.setText("ID Number");
@@ -179,6 +190,7 @@ public class EnrolmentForm {
 		JComboBox comboBoxStudentType = new JComboBox(studentType);
 		comboBoxStudentType.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
+				 // If an item is selected, sets the selected item as the value of the String "comboStudentType"
 				if (e.getStateChange() == ItemEvent.SELECTED) {
 					comboStudentType = comboBoxStudentType.getSelectedItem().toString();
 				} else {
@@ -193,6 +205,7 @@ public class EnrolmentForm {
 		JComboBox comboBoxCourse = new JComboBox(coursesOffered);
 		comboBoxCourse.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
+				 // If an item is selected, sets the selected item as the value of the String "comboCourseName"
 				if (e.getStateChange() == ItemEvent.SELECTED) {
 					comboCourseName = comboBoxCourse.getSelectedItem().toString();
 				} else {
@@ -229,57 +242,10 @@ public class EnrolmentForm {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		JButton btnEnrollStudent = new JButton("Enroll Student");
-		btnEnrollStudent.setForeground(new Color(255, 255, 255));
-		btnEnrollStudent.setBackground(new Color(0, 193, 49));
-		btnEnrollStudent.setBounds(387, 377, 224, 32);
-		panel.add(btnEnrollStudent);
-		btnEnrollStudent.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-			
-			boolean enrollmentSuccess = false;
-			EnrolleeCredentials enroll = new EnrolleeCredentials("","","",comboCourseName,comboStudentType);
-				totalPayableFee = enroll.totalFees(comboStudentType, comboCourseName, 0, 0);
-			
-				if (textFirstName.getText().equals("") || textLastName.getText().equals("") || textIDNumber.getText().equals("") || comboStudentType.equals("") || comboCourseName.equals("")) {
-					enrollmentSuccess = false;
-				}
-				else if (textFirstName.getText().equals("First Name") || textLastName.getText().equals("Last Name") || textIDNumber.getText().equals("ID Number") || comboStudentType.equals("Select Student Type") || comboCourseName.equals("Select Course")) {	
-					enrollmentSuccess = false;
-					
-				} else {
-					enrollmentSuccess = true;
-				}
-
-
-				if (enrollmentSuccess) {
-					
-					btnEnrollStudent.addActionListener(new ActionListener() {
-						public void actionPerformed(ActionEvent e) {
-							Object[] row = new Object[6];
-							row[0] = textFirstName.getText();
-							row[1] = textLastName.getText();
-							row[2] = textIDNumber.getText();
-							row[3] = comboBoxCourse.getSelectedItem();
-							row[4] = comboBoxStudentType.getSelectedItem();
-							row[5] = totalPayableFee;
-					
-							model.addRow(row);
-							}
-						}); 
-					
-					JOptionPane.showMessageDialog(null, "Enrollment Complete!");
-					
-				} else {
-					JOptionPane.showMessageDialog(null, "Invalid Input, Please try again!");
-				}
-				
-				} 
-		});
-		btnEnrollStudent.setFont(new Font("Tahoma", Font.BOLD, 15));
+		
 		
 		JLabel lblSchoolPoster = new JLabel("");
+		// Created Image class and image icon class to insert a picture in the JLabel 
 		Image img = new ImageIcon(this.getClass().getResource("HNSPOST.png")).getImage();
 		lblSchoolPoster.setIcon(new ImageIcon(img));
 		lblSchoolPoster.setBounds(0, 0, 309, 434);
@@ -317,6 +283,7 @@ public class EnrolmentForm {
 			table.setRowHeight(30);
 			table.setAutoCreateRowSorter(true);
 			
+				// Adds JScrollPane in the JTable
 				JScrollPane pane = new JScrollPane(table);
 				pane.setBounds(10, 37, 664, 128);
 				panelEnrollDisplay.add(pane);
@@ -328,18 +295,91 @@ public class EnrolmentForm {
 				panelEnrollDisplay.add(lblEnrolledStudents);
 				lblEnrolledStudents.setFont(new Font("Tahoma", Font.BOLD, 12));
 				
-				JButton btnNewButton = new JButton("Log Out");
-				btnNewButton.addMouseListener(new MouseAdapter() {
+				JButton btnLogOut = new JButton("Log Out");
+				btnLogOut.addMouseListener(new MouseAdapter() {
 					@Override
+					// When button is clicked, closes the EnrolmentForm frame and opens Login Page
 					public void mouseClicked(MouseEvent e) {
 						LoginPage login = new LoginPage();
 						frame.dispose();
 						login.main(null);
 					}
 				});
-				btnNewButton.setForeground(new Color(255, 255, 255));
-				btnNewButton.setBackground(new Color(255, 0, 0));
-				btnNewButton.setBounds(589, 10, 85, 21);
-				panelEnrollDisplay.add(btnNewButton);
+				btnLogOut.setForeground(new Color(255, 255, 255));
+				btnLogOut.setBackground(new Color(255, 0, 0));
+				btnLogOut.setBounds(589, 10, 85, 21);
+				panelEnrollDisplay.add(btnLogOut);
+				
+				JButton btnFeeBreakdown = new JButton("Fee Breakdown");
+				btnFeeBreakdown.addMouseListener(new MouseAdapter() {
+					@Override
+					// When button is clicked, opens the Fee Breakdown window
+					public void mouseClicked(MouseEvent e) {
+						FeeBreakdown fees = new FeeBreakdown();
+							fees.main(coursesOffered);
+							
+					}
+				});
+				btnFeeBreakdown.setForeground(Color.WHITE);
+				btnFeeBreakdown.setFont(new Font("Tahoma", Font.PLAIN, 11));
+				btnFeeBreakdown.setBackground(new Color(0, 193, 49));
+				btnFeeBreakdown.setBounds(469, 10, 110, 21);
+				panelEnrollDisplay.add(btnFeeBreakdown);
+				
+				JButton btnEnrollStudent = new JButton("Enroll Student");
+				btnEnrollStudent.setForeground(new Color(255, 255, 255));
+				btnEnrollStudent.setBackground(new Color(0, 193, 49));
+				btnEnrollStudent.setBounds(387, 377, 224, 32);
+				panel.add(btnEnrollStudent);
+				btnEnrollStudent.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						
+					boolean enrollmentSuccess = false;
+					EnrolleeCredentials enroll = new EnrolleeCredentials("","","",comboCourseName,comboStudentType);
+						// Sets the return value of totalFees() method as the value of integer "totalPayableFee"
+						totalPayableFee = enroll.totalFees(comboStudentType, comboCourseName, 0, 0);
+					
+						// Sets the value of boolean variable "enrollmentSuccess" false if the the item
+        					// in the text fields is equal to the default or if it is blank.
+        					// Then, TRUE if an item is selected.
+						if (textFirstName.getText().equals("") || textLastName.getText().equals("") || textIDNumber.getText().equals("") || comboStudentType.equals("") || comboCourseName.equals("")) {
+							JOptionPane.showMessageDialog(null, "Please input all information!");
+						}
+						else if (textFirstName.getText().equals("First Name") || textLastName.getText().equals("Last Name") || textIDNumber.getText().equals("ID Number") || comboStudentType.equals("Select Student Type") || comboCourseName.equals("Select Course")) {	
+							JOptionPane.showMessageDialog(null, "Please input all information!");
+						} else {
+							enrollmentSuccess = true;
+						}
+
+						 // If enrollmentSuccess, adds the objects in the JTable
+						if (enrollmentSuccess) {
+							
+							JOptionPane.showMessageDialog(null, "Enrollment Complete!");
+							
+							Object[] row = new Object[6];
+								row[0] = textFirstName.getText();
+								row[1] = textLastName.getText();
+								row[2] = textIDNumber.getText();
+								row[3] = comboBoxCourse.getSelectedItem();
+								row[4] = comboBoxStudentType.getSelectedItem();
+								row[5] = totalPayableFee;
+						
+								model.addRow(row);
+							
+							// Clears the textFields and sets back the combo box to default index
+							textFirstName.setText("");
+							textLastName.setText("");
+							textIDNumber.setText("");
+							comboBoxCourse.setSelectedIndex(0);
+							comboBoxStudentType.setSelectedIndex(0);
+							
+						} 
+				
+					} 
+			});
+				
+				btnEnrollStudent.setFont(new Font("Tahoma", Font.BOLD, 15));
 	}
+	
 }
