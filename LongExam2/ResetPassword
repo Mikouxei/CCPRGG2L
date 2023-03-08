@@ -216,7 +216,8 @@ public class ResetPassword {
 			@Override
 			public void focusGained(FocusEvent e) {
 			 // When focus is gained, sets password field to empty and then start to hide the inputted value
-			if (pfNewPass.getText().equals("Password")) {
+			if (pfNewPass.getText().equals("New Password")) {
+				pfNewPass.setEchoChar('●');
 				pfNewPass.setText("");
 			} else {
 				pfNewPass.selectAll();
@@ -226,7 +227,7 @@ public class ResetPassword {
 			// DEFAULT: When focus is lost, reverts to the default password field text
 			public void focusLost(FocusEvent e) {
 				if (pfNewPass.getText().equals("")) {
-					pfNewPass.setText("Password");
+					pfNewPass.setText("New Password");
 				}
 			}
 		});
