@@ -21,6 +21,8 @@ import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JCheckBox;
+import java.awt.event.ItemListener;
+import java.awt.event.ItemEvent;
 
 public class LoginPage {
 
@@ -82,6 +84,7 @@ public class LoginPage {
 		txtEmailOrPhone = new JTextField();
 		txtEmailOrPhone.addFocusListener(new FocusAdapter() {
 			@Override
+			 // When focus is gained, sets textfield empty
 			public void focusGained(FocusEvent e) {
 				if (txtEmailOrPhone.getText().equals("Email or phone number")) {
 					txtEmailOrPhone.setText("");
@@ -89,7 +92,7 @@ public class LoginPage {
 					txtEmailOrPhone.selectAll();
 				}
 			}
-			
+			// When focus is lost, reverts the textfield to default
 			public void focusLost(FocusEvent e) {
 				if (txtEmailOrPhone.getText().equals("")) {
 					txtEmailOrPhone.setText("Email or phone number");
@@ -108,6 +111,7 @@ public class LoginPage {
 		JLabel lblForgotPass = new JLabel("Forgot password?");
 		lblForgotPass.addMouseListener(new MouseAdapter() {
 			@Override
+			  // When the label is clicked, opens the forgot Password window
 			public void mouseClicked(MouseEvent e) {
 				ForgotPassword forgotpass = new ForgotPassword();
 				Facebook.dispose();
@@ -127,6 +131,8 @@ public class LoginPage {
 		});
 		btnLogIn.addMouseListener(new MouseAdapter() {
 			@Override
+			 // When button is clicked, checks if the input is correct
+      			// If the input is correct, opens the Enrolment Form window
 			public void mouseClicked(MouseEvent e) {
 				if ((txtEmailOrPhone.getText().equals("mikoclark19@gmail.com") && pfPassword.getText().equals("password1") || (txtEmailOrPhone.getText().equals("jericolim32@gmail.com") && pfPassword.getText().equals("password2")))) {
 					EnrolmentForm enroll = new EnrolmentForm();
@@ -164,6 +170,7 @@ public class LoginPage {
 		pfPassword.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		pfPassword.addFocusListener(new FocusAdapter() {
 			@Override
+			 // When focus is gained, hides the input password
 			public void focusGained(FocusEvent e) {
 			if (pfPassword.getText().equals("Password")) {
 				pfPassword.setEchoChar('●');
@@ -173,6 +180,7 @@ public class LoginPage {
 			}
 			}
 			@Override
+			 // DEFAULT: When focus is lost, shows the default password field text
 			public void focusLost(FocusEvent e) {
 				if (pfPassword.getText().equals("")) {
 					pfPassword.setText("Password");
@@ -185,11 +193,21 @@ public class LoginPage {
 		panelPassword.add(pfPassword);
 		pfPassword.setBorder(null);
 		
-		JCheckBox chckbxRememberMe = new JCheckBox(" Remember me");
-		chckbxRememberMe.setBackground(new Color(255, 255, 255));
-		chckbxRememberMe.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		chckbxRememberMe.setBounds(241, 171, 107, 21);
-		panelSignIn.add(chckbxRememberMe);
+		JCheckBox chckbxShowPassword = new JCheckBox("Show Password");
+		chckbxShowPassword.addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent e) {
+				  // When button is clicked, opens the Sign up window
+				if (chckbxShowPassword.isSelected()) {
+					pfPassword.setEchoChar((char)0);
+				} else {
+					pfPassword.setEchoChar('●');
+				}
+			}
+		});
+		chckbxShowPassword.setBackground(new Color(255, 255, 255));
+		chckbxShowPassword.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		chckbxShowPassword.setBounds(240, 171, 134, 21);
+		panelSignIn.add(chckbxShowPassword);
 		
 		JButton btnCreateNewAcc = new JButton("Create new account");
 		btnCreateNewAcc.addMouseListener(new MouseAdapter() {
