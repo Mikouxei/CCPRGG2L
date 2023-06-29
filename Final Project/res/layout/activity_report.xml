@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="409dp"
+    android:layout_height="729dp"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg1"
+        tools:context=".Report">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="CRIMINAL BACKGROUND"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_contactName11"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_contactName11" />
+
+        <TextView
+            android:id="@+id/pb_tv_contactName8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Basic Education/Degree/Course:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/pb_tv_contactName4"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_contactName"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_contactName" />
+
+        <TextView
+            android:id="@+id/pb_tv_contactName4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Basic Education/Degree/Course:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_contactName2"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_contactName2" />
+
+        <TextView
+            android:id="@+id/pb_tv_emergency2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="SECONDARY"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_contactName5"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_contactName5" />
+
+        <TextView
+            android:id="@+id/pb_tv_emergency3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="VOCATIONAL"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_contactName4"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_contactName4" />
+
+        <TextView
+            android:id="@+id/pb_tv_emergency4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="COLLEGE"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_emergency3"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_contactName8" />
+
+        <TextView
+            android:id="@+id/pb_tv_emergency5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="GRADUATE STUDIES"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_contactName9"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_contactName9" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="EDUCATIONAL BACKGROUND"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_philhealth" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="EMERGENCY CONTACT"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.126"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="ID NUMBERS"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/elem_txtView" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="MY PHOTO"
+            android:textSize="10sp"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/personalBG_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="30dp"
+            android:text="PERSONAL BACKGROUND"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/record" />
+
+        <TextView
+            android:id="@+id/cb_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/personalBG_txtView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/rep_firstName"
+            android:layout_width="76dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            android:hint="First Name"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_title"
+            app:layout_constraintStart_toEndOf="@+id/cb_title"
+            app:layout_constraintTop_toTopOf="@+id/cb_title" />
+
+        <TextView
+            android:id="@+id/record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="RECORD"
+            android:textColor="@color/dark_grey"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rep_lastName"
+            android:layout_width="76dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="5dp"
+            android:hint="Last Name"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/rep_firstName"
+            app:layout_constraintStart_toEndOf="@+id/rep_firstName"
+            app:layout_constraintTop_toTopOf="@+id/rep_firstName" />
+
+        <TextView
+            android:id="@+id/cb_1_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Email:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/cb_title"
+            app:layout_constraintTop_toBottomOf="@+id/cb_title" />
+
+        <TextView
+            android:id="@+id/rep_email"
+            android:layout_width="159dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            android:hint="Email"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_1_txtView"
+            app:layout_constraintEnd_toEndOf="@+id/rep_lastName"
+            app:layout_constraintStart_toEndOf="@+id/cb_1_txtView"
+            app:layout_constraintTop_toTopOf="@+id/cb_1_txtView" />
+
+        <TextView
+            android:id="@+id/pb_tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Gender:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/cb_1_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/cb_1_txtView" />
+
+        <TextView
+            android:id="@+id/rep_gender"
+            android:layout_width="147dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:hint="Gender"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_tv_email"
+            app:layout_constraintEnd_toEndOf="@+id/rep_email"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/pb_tv_email"
+            app:layout_constraintTop_toBottomOf="@+id/rep_email"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/elem_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Phone:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_height"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_height" />
+
+        <TextView
+            android:id="@+id/rep_phone"
+            android:layout_width="155dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            android:hint="Phone No."
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/elem_txtView"
+            app:layout_constraintStart_toEndOf="@+id/elem_txtView"
+            app:layout_constraintTop_toTopOf="@+id/elem_txtView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/pb_tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="220dp"
+            android:text="Height:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rep_phone" />
+
+        <TextView
+            android:id="@+id/rep_height"
+            android:layout_width="44dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="5dp"
+            android:hint="Height"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintStart_toEndOf="@+id/pb_tv_gender"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_gender" />
+
+        <TextView
+            android:id="@+id/pb_tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:text="Weight:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/pb_tv_gender"
+            app:layout_constraintTop_toTopOf="@+id/rep_height" />
+
+        <TextView
+            android:id="@+id/rep_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:hint="Weight"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_tv_phone"
+            app:layout_constraintStart_toEndOf="@+id/pb_tv_phone"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_phone"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/pb_tv_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Civil Status:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_email"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_email" />
+
+        <TextView
+            android:id="@+id/rep_civilStatus"
+            android:layout_width="46dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            android:hint="Civil Status"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintStart_toEndOf="@+id/pb_tv_height"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_height" />
+
+        <TextView
+            android:id="@+id/pb_weight_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Pagibig No.:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/rep_pagibig"
+            android:layout_width="98dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="12dp"
+            android:hint="Pagibig"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_weight_txtView"
+            app:layout_constraintStart_toEndOf="@+id/pb_weight_txtView"
+            app:layout_constraintTop_toTopOf="@+id/pb_weight_txtView" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Philhealth:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/pb_weight_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/pb_weight_txtView" />
+
+        <TextView
+            android:id="@+id/rep_philhealth"
+            android:layout_width="109dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            android:hint="Philhealth"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/pb_tv_cs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tin No.:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/rep_pagibig"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_gender"
+            app:layout_constraintTop_toTopOf="@+id/rep_pagibig" />
+
+        <TextView
+            android:id="@+id/rep_tin"
+            android:layout_width="108dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="12dp"
+            android:hint="Tin No."
+            android:textColor="@color/dark_grey"
+            app:layout_constraintStart_toEndOf="@+id/pb_tv_cs"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_cs" />
+
+        <TextView
+            android:id="@+id/pv_tv_pagibig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="GSIS:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_cs"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_cs" />
+
+        <TextView
+            android:id="@+id/rep_gsis"
+            android:layout_width="122dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="12dp"
+            android:hint="GSIS"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="@+id/rep_tin"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/pv_tv_pagibig"
+            app:layout_constraintTop_toTopOf="@+id/pv_tv_pagibig" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="124dp"
+            android:layout_height="87dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.951"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalBG_txtView"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/pb_tv_tin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Name:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView27"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+        <TextView
+            android:id="@+id/rep_name"
+            android:layout_width="127dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            android:hint="Name"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintStart_toEndOf="@+id/pb_tv_tin"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_tin" />
+
+        <TextView
+            android:id="@+id/pb_tv_philhealth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Contact:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_tin"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_tin" />
+
+        <TextView
+            android:id="@+id/rep_contact"
+            android:layout_width="113dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            android:hint="Contact"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_tv_philhealth"
+            app:layout_constraintStart_toEndOf="@+id/pb_tv_philhealth"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_philhealth" />
+
+        <TextView
+            android:id="@+id/pb_tv_gsis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Relationship:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/rep_name"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_gender"
+            app:layout_constraintTop_toTopOf="@+id/rep_name" />
+
+        <TextView
+            android:id="@+id/rep_relationship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:hint="Relationship"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_tv_gsis"
+            app:layout_constraintStart_toEndOf="@+id/pb_tv_gsis"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_gsis" />
+
+        <TextView
+            android:id="@+id/pb_tv_emergency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ELEMENTARY"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView28"
+            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+        <TextView
+            android:id="@+id/rep_elementary_school"
+            android:layout_width="309dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            android:hint="School"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintStart_toEndOf="@+id/pb_tv_contactName3"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_contactName3" />
+
+        <TextView
+            android:id="@+id/rep_elementary_course"
+            android:layout_width="155dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            android:hint="Course"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="@+id/rep_relationship"
+            app:layout_constraintStart_toEndOf="@+id/pb_tv_contactName5"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_contactName5" />
+
+        <TextView
+            android:id="@+id/pb_tv_contactName3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="School:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_emergency"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_emergency" />
+
+        <TextView
+            android:id="@+id/pb_tv_contactName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="School:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_emergency2"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_emergency2" />
+
+        <TextView
+            android:id="@+id/pb_tv_contactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="School:"
+            android:textStyle="italic"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_emergency3"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_emergency3" />
+
+        <TextView
+            android:id="@+id/pb_tv_contactName7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="School:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_emergency4"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_emergency4" />
+
+        <TextView
+            android:id="@+id/pb_tv_contactName10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="School:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_emergency5"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_emergency5" />
+
+        <TextView
+            android:id="@+id/pb_tv_contactName5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Basic Education/Degree/Course:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_contactName3"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_contactName3" />
+
+        <TextView
+            android:id="@+id/pb_tv_contactName9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Basic Education/Degree/Course:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_contactName7"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_contactName7" />
+
+        <TextView
+            android:id="@+id/pb_tv_contactName11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Basic Education/Degree/Course:"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/pb_tv_contactName10"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tv_contactName10" />
+
+        <TextView
+            android:id="@+id/rep_secondary_school"
+            android:layout_width="309dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            android:hint="School"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="@+id/rep_elementary_school"
+            app:layout_constraintStart_toEndOf="@+id/pb_tv_contactName2"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_contactName2" />
+
+        <TextView
+            android:id="@+id/rep_secondary_course"
+            android:layout_width="156dp"
+            android:layout_height="19dp"
+            android:hint="Course"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="@+id/rep_elementary_course"
+            app:layout_constraintStart_toStartOf="@+id/rep_elementary_course"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_contactName4" />
+
+        <TextView
+            android:id="@+id/rep_vocational_school"
+            android:layout_width="309dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            android:hint="School"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="@+id/rep_secondary_school"
+            app:layout_constraintStart_toEndOf="@+id/pb_tv_contactName"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_contactName" />
+
+        <TextView
+            android:id="@+id/rep_vocational_course"
+            android:layout_width="157dp"
+            android:layout_height="19dp"
+            android:hint="Course"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintStart_toStartOf="@+id/rep_secondary_course"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_contactName8" />
+
+        <TextView
+            android:id="@+id/rep_college_school"
+            android:layout_width="309dp"
+            android:layout_height="19dp"
+            android:hint="School"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="@+id/rep_vocational_school"
+            app:layout_constraintStart_toStartOf="@+id/rep_vocational_school"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_contactName7" />
+
+        <TextView
+            android:id="@+id/rep_college_course"
+            android:layout_width="157dp"
+            android:layout_height="19dp"
+            android:hint="Course"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="@+id/rep_vocational_course"
+            app:layout_constraintStart_toStartOf="@+id/rep_vocational_course"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_contactName9" />
+
+        <TextView
+            android:id="@+id/rep_graduate_school"
+            android:layout_width="309dp"
+            android:layout_height="20dp"
+            android:hint="School"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="@+id/rep_college_school"
+            app:layout_constraintStart_toStartOf="@+id/rep_college_school"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_contactName10" />
+
+        <TextView
+            android:id="@+id/rep_graduate_course"
+            android:layout_width="157dp"
+            android:layout_height="19dp"
+            android:hint="Course"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="@+id/rep_college_course"
+            app:layout_constraintStart_toStartOf="@+id/rep_college_course"
+            app:layout_constraintTop_toTopOf="@+id/pb_tv_contactName11" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="1. Have you been found guilty of any administrative\noffense?"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/rep_cb_1"
+            android:layout_width="61dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="5dp"
+            android:hint="answer 1"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView19"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <TextView
+            android:id="@+id/rep_cb_1_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="21"
+            android:hint="detail"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/rep_cb_1"
+            app:layout_constraintTop_toBottomOf="@+id/rep_cb_1" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="2. Have you been criminally charged before any court?"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/textView19"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView19"
+            app:layout_constraintTop_toBottomOf="@+id/rep_cb_1_detail" />
+
+        <TextView
+            android:id="@+id/rep_cb_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="answer 2"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView20"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <TextView
+            android:id="@+id/rep_cb_2_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="21"
+            android:hint="detail"
+            android:visibility="invisible"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/rep_cb_2"
+            app:layout_constraintTop_toBottomOf="@+id/rep_cb_2" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="3. Have you ever been convicted of any crime or\nviolation of any law, decree, ordinance or regulation by\nany court or tribunal?"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/textView20"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/rep_cb_2_detail" />
+
+        <TextView
+            android:id="@+id/rep_cb_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="answer 3"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView21"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/rep_cb_3_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="21"
+            android:hint="detail"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/rep_cb_2_detail"
+            app:layout_constraintStart_toStartOf="@+id/rep_cb_3"
+            app:layout_constraintTop_toBottomOf="@+id/rep_cb_3" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="4(a). Are you a member of any indigenous group?"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/textView21"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/rep_cb_3_detail" />
+
+        <TextView
+            android:id="@+id/rep_cb_4a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="answer 4a"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView22"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+        <TextView
+            android:id="@+id/rep_cb_4a_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="21"
+            android:hint="detail"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/rep_cb_4a"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/rep_cb_4a"
+            app:layout_constraintTop_toBottomOf="@+id/rep_cb_4a" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="4(b). Are you a person with disability?"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/textView22"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/rep_cb_4a_detail" />
+
+        <TextView
+            android:id="@+id/rep_cb_4b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="answer 4b"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView23"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView23"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+        <TextView
+            android:id="@+id/rep_cb_4b_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="21"
+            android:hint="detail"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/rep_cb_4b"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/rep_cb_4b"
+            app:layout_constraintTop_toBottomOf="@+id/rep_cb_4b" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="4(c). Are you a solo parent?"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/textView23"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView23"
+            app:layout_constraintTop_toBottomOf="@+id/rep_cb_4b_detail" />
+
+        <TextView
+            android:id="@+id/rep_cb_4c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="answer 4c"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView24"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView24"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+        <TextView
+            android:id="@+id/rep_cb_4c_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="21"
+            android:hint="detail"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/rep_cb_4c"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/rep_cb_4c"
+            app:layout_constraintTop_toBottomOf="@+id/rep_cb_4c" />
+
+        <Button
+            android:id="@+id/rep_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Return"
+            android:elevation="20dp"
+            android:stateListAnimator="@null"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rep_cb_4c_detail" />
+
+        <TextView
+            android:id="@+id/rep_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text=" "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rep_return" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

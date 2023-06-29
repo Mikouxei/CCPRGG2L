@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="409dp"
+    android:layout_height="729dp"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg1"
+        tools:context=".EducationalBackground">
+
+        <TextView
+            android:id="@+id/eb_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="20dp"
+            android:text="EDUCATIONAL ATTAINMENT"
+            android:textColor="@color/dark_grey"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/ed_educAttainment_radioGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/ed_educAttainment_radioGroup"
+            android:layout_width="412dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="110dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/eb_elementary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkEducAttainment"
+                android:text="Elementary"
+                android:textColor="@color/dark_grey"
+                android:textSize="10sp"
+                android:theme="@style/MyRadioButton" />
+
+            <RadioButton
+                android:id="@+id/ed_secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkEducAttainment"
+                android:text="\Secondary"
+                android:textColor="@color/dark_grey"
+                android:textSize="10sp"
+                android:theme="@style/MyRadioButton" />
+
+            <RadioButton
+                android:id="@+id/ed_vocational"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkEducAttainment"
+                android:text="Vocational"
+                android:textColor="@color/dark_grey"
+                android:textSize="10sp"
+                android:theme="@style/MyRadioButton" />
+
+            <RadioButton
+                android:id="@+id/ed_college"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkEducAttainment"
+                android:text="College"
+                android:textColor="@color/dark_grey"
+                android:textSize="10sp"
+                android:theme="@style/MyRadioButton" />
+
+            <RadioButton
+                android:id="@+id/ed_gradStudies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:onClick="checkEducAttainment"
+                android:text="Graduate Studies"
+                android:textColor="@color/dark_grey"
+                android:textSize="8sp"
+                android:theme="@style/MyRadioButton" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/elem_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="170dp"
+            android:text="ELEMENTARY"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/secondary_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="SECONDARY"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.094"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eb_Elem_NoS" />
+
+        <TextView
+            android:id="@+id/vocational_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="VOCATIONAL"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eb_Secondary_NoS" />
+
+        <TextView
+            android:id="@+id/college_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="COLLEGE"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.087"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eb_Vocational_NoS" />
+
+        <TextView
+            android:id="@+id/graduate_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="GRADUATE STUDIES"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eb_College_NoS" />
+
+        <TextView
+            android:id="@+id/cb_1_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Name of School:"
+            android:textColor="@color/dark_grey"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/eb_Elem_NoS"
+            app:layout_constraintTop_toBottomOf="@+id/elem_txtView" />
+
+        <TextView
+            android:id="@+id/elem_BE_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basic Education/Degree/Course:"
+            android:textColor="@color/dark_grey"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_1_txtView"
+            app:layout_constraintStart_toStartOf="@+id/eb_Elem_BE"
+            app:layout_constraintTop_toTopOf="@+id/cb_1_txtView" />
+
+        <TextView
+            android:id="@+id/secondary_NoS_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Name of School:"
+            android:textColor="@color/dark_grey"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/secondary_txtView" />
+
+        <TextView
+            android:id="@+id/secondary_BE_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basic Education/Degree/Course:"
+            android:textColor="@color/dark_grey"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/secondary_NoS_txtView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.654"
+            app:layout_constraintStart_toEndOf="@+id/secondary_NoS_txtView"
+            app:layout_constraintTop_toTopOf="@+id/secondary_NoS_txtView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/vocational_NoS_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Name of School:"
+            android:textColor="@color/dark_grey"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vocational_txtView" />
+
+        <TextView
+            android:id="@+id/vocational_BE_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="56dp"
+            android:text="Basic Education/Degree/Course:"
+            android:textColor="@color/dark_grey"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/vocational_NoS_txtView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/vocational_NoS_txtView"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/college_NoS_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Name of School:"
+            android:textColor="@color/dark_grey"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/college_txtView" />
+
+        <TextView
+            android:id="@+id/college_BE_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basic Education/Degree/Course:"
+            android:textColor="@color/dark_grey"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/college_NoS_txtView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.654"
+            app:layout_constraintStart_toEndOf="@+id/college_NoS_txtView"
+            app:layout_constraintTop_toTopOf="@+id/college_NoS_txtView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/graduateStudies_NoS_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Name of School:"
+            android:textColor="@color/dark_grey"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/graduate_txtView" />
+
+        <TextView
+            android:id="@+id/graduateStudies_BE_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basic Education/Degree/Course:"
+            android:textColor="@color/dark_grey"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/graduateStudies_NoS_txtView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.654"
+            app:layout_constraintStart_toEndOf="@+id/graduateStudies_NoS_txtView"
+            app:layout_constraintTop_toTopOf="@+id/graduateStudies_NoS_txtView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/eb_Elem_NoS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="8"
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_1_txtView" />
+
+        <EditText
+            android:id="@+id/eb_Elem_BE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="8"
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/eb_Elem_NoS"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/eb_Elem_NoS"
+            app:layout_constraintTop_toTopOf="@+id/eb_Elem_NoS"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/eb_Secondary_NoS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="8"
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/secondary_NoS_txtView" />
+
+        <EditText
+            android:id="@+id/eb_Secondary_BE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="8"
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/eb_Secondary_NoS"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/eb_Secondary_NoS"
+            app:layout_constraintTop_toTopOf="@+id/eb_Secondary_NoS"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/eb_Vocational_NoS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="8"
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vocational_NoS_txtView" />
+
+        <EditText
+            android:id="@+id/eb_Vocational_BE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="8"
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/eb_Vocational_NoS"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/eb_Vocational_NoS"
+            app:layout_constraintTop_toTopOf="@+id/eb_Vocational_NoS"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/eb_College_NoS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="8"
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/college_NoS_txtView" />
+
+        <EditText
+            android:id="@+id/eb_College_BE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="8"
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/eb_College_NoS"
+            app:layout_constraintStart_toEndOf="@+id/eb_College_NoS"
+            app:layout_constraintTop_toTopOf="@+id/eb_College_NoS"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/eb_Graduate_NoS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="8"
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/graduateStudies_NoS_txtView" />
+
+        <EditText
+            android:id="@+id/eb_Graduate_BE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:background="@drawable/border"
+            android:elevation="10dp"
+            android:ems="8"
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/eb_Graduate_NoS"
+            app:layout_constraintStart_toEndOf="@+id/eb_Graduate_NoS"
+            app:layout_constraintTop_toTopOf="@+id/eb_Graduate_NoS"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/eb_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Next"
+            android:elevation="20dp"
+            android:stateListAnimator="@null"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eb_Graduate_NoS" />
+
+        <TextView
+            android:id="@+id/eb_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text=" "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eb_next" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

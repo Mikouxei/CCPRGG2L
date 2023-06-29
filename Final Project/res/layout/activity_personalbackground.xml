@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="409dp"
+    android:layout_height="729dp"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="-1dp"
+    tools:layout_editor_absoluteY="-5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg1"
+        tools:context=".test"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="-5dp">
+
+        <TextView
+            android:id="@+id/pb_name_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="250dp"
+            android:text="Name:"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.118"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/pb_email_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Email:"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.123"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_firstname" />
+
+        <EditText
+            android:id="@+id/pb_firstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="216dp"
+            android:background="@drawable/border"
+            android:ems="7"
+            android:hint="First Name"
+            android:elevation="5dp"
+            android:textColorHint="@color/lemon_chiffon"
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/pb_name_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/pb_name_txtView" />
+
+        <EditText
+            android:id="@+id/pb_lastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/border"
+            android:ems="7"
+            android:hint="Last Name"
+            android:elevation="5dp"
+            android:textColorHint="@color/lemon_chiffon"
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_firstname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toEndOf="@+id/pb_firstname"
+            app:layout_constraintTop_toTopOf="@+id/pb_firstname"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/pb_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border"
+            android:ems="15"
+            android:hint="sample@email.com"
+            android:elevation="5dp"
+            android:textColorHint="@color/lemon_chiffon"
+            android:inputType="textEmailAddress"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_email_txtView" />
+
+        <TextView
+            android:id="@+id/pb_gender_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Gender:"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.133"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_email" />
+
+        <TextView
+            android:id="@+id/pb_phone_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Phone:"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.131"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_height" />
+
+        <EditText
+            android:id="@+id/pb_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border"
+            android:ems="7"
+            android:hint="+63"
+            android:elevation="5dp"
+            android:textColorHint="@color/lemon_chiffon"
+            android:inputType="phone"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.183"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_phone_txtView" />
+
+
+        <TextView
+            android:id="@+id/pb_height_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Height:"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintStart_toStartOf="@+id/pb_gender_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/pb_gender_radioGroup" />
+
+        <EditText
+            android:id="@+id/pb_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border"
+            android:ems="3"
+            android:hint="m"
+            android:elevation="5dp"
+            android:textColorHint="@color/lemon_chiffon"
+            android:inputType="number"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.138"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_height_txtView" />
+
+        <TextView
+            android:id="@+id/pb_weight_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Weight:"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_height_txtView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.339"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_gender_radioGroup"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/pb_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border"
+            android:ems="3"
+            android:hint="kg"
+            android:elevation="5dp"
+            android:textColorHint="@color/lemon_chiffon"
+            android:inputType="number"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.355"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_weight_txtView" />
+
+        <TextView
+            android:id="@+id/pb_cs_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Civil Status:"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.708"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_email" />
+
+        <RadioGroup
+            android:id="@+id/pb_cs_radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.767"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_cs_txtView">
+
+            <RadioButton
+                android:id="@+id/pb_cs_single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkCS"
+                android:text="Single"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                tools:layout_editor_absoluteX="104dp"
+                tools:layout_editor_absoluteY="433dp" />
+
+            <RadioButton
+                android:id="@+id/pb_cs_married"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkCS"
+                android:text="Married"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                tools:layout_editor_absoluteX="104dp"
+                tools:layout_editor_absoluteY="481dp" />
+
+            <RadioButton
+                android:id="@+id/pb_cs_separated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkCS"
+                android:text="Separated"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                tools:layout_editor_absoluteX="104dp"
+                tools:layout_editor_absoluteY="529dp" />
+
+            <RadioButton
+                android:id="@+id/pb_cs_widowed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkCS"
+                android:text="Widowed"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                tools:layout_editor_absoluteX="104dp"
+                tools:layout_editor_absoluteY="577dp" />
+
+            <RadioButton
+                android:id="@+id/pb_cs_others"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkCS"
+                android:text="Others"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                tools:layout_editor_absoluteX="104dp"
+                tools:layout_editor_absoluteY="625dp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/pb_pagibig_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Pagibig No.:"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.137"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_id_txtView" />
+
+        <EditText
+            android:id="@+id/pb_pagibig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="9"
+            android:inputType="number"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_pagibig_txtView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.809"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pb_pagibig_txtView" />
+
+        <TextView
+            android:id="@+id/pb_tin_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tin No.:"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_tin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.203"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pb_tin" />
+
+        <EditText
+            android:id="@+id/pb_tin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="9"
+            android:inputType="number"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.809"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_pagibig" />
+
+        <TextView
+            android:id="@+id/pb_philhealth_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PhilHealth:"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_philhealth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.154"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pb_philhealth" />
+
+        <EditText
+            android:id="@+id/pb_philhealth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="9"
+            android:inputType="number"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.809"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_tin" />
+
+        <TextView
+            android:id="@+id/pb_gsis_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GSIS:"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_gsis"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.229"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pb_gsis" />
+
+        <EditText
+            android:id="@+id/pb_gsis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="9"
+            android:inputType="number"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.809"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_philhealth" />
+
+        <TextView
+            android:id="@+id/pb_ec_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="210dp"
+            android:text="EMERGENCY CONTACT"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.201"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_id_txtView" />
+
+        <TextView
+            android:id="@+id/pb_ec_name_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_ec_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.214"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pb_ec_name" />
+
+        <EditText
+            android:id="@+id/pb_ec_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="9"
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.809"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_ec_txtView" />
+
+        <TextView
+            android:id="@+id/pb_ec_contact_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact No.:"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_ec_contact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.143"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pb_ec_contact" />
+
+        <EditText
+            android:id="@+id/pb_ec_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="9"
+            android:inputType="number"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.809"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_ec_name" />
+
+        <TextView
+            android:id="@+id/pb_ec_relationship_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Relationship:"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_ec_relationship"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.128"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pb_ec_relationship" />
+
+        <Spinner
+            android:id="@+id/pb_ec_relationship"
+            android:layout_width="187dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="12dp"
+            android:elevation="20dp"
+            android:stateListAnimator="@null"
+            android:text="Select"
+            android:theme="@style/MySpinnerItemStyle"
+            app:layout_constraintEnd_toEndOf="@+id/pb_ec_contact"
+            app:layout_constraintHorizontal_bias="0.777"
+            app:layout_constraintStart_toStartOf="@+id/pb_ec_contact"
+            app:layout_constraintTop_toBottomOf="@+id/pb_ec_contact" />
+
+
+        <ImageView
+            android:id="@+id/pb_photo"
+            android:layout_width="124dp"
+            android:layout_height="127dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.217"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_title"
+            app:srcCompat="@drawable/baseline_person_24" />
+
+        <Button
+            android:id="@+id/pb_capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Take a Photo"
+            android:elevation="20dp"
+            android:stateListAnimator="@null"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.014"
+            app:layout_constraintStart_toEndOf="@+id/pb_photo"
+            app:layout_constraintTop_toTopOf="@+id/pb_photo"
+            app:layout_constraintVertical_bias="0.55" />
+
+        <Button
+            android:id="@+id/pb_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Next"
+            android:elevation="20dp"
+            android:stateListAnimator="@null"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_ec_relationship" />
+
+        <TextView
+            android:id="@+id/pb_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text=" "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_next" />
+
+        <RadioGroup
+            android:id="@+id/pb_gender_radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/pb_email"
+            app:layout_constraintTop_toBottomOf="@+id/pb_gender_txtView">
+
+            <RadioButton
+                android:id="@+id/pb_gender_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkGender"
+                android:theme="@style/MyRadioButton"
+                android:textColor="@color/dark_grey"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/pb_gender_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkGender"
+                android:layout_marginLeft="5dp"
+                android:theme="@style/MyRadioButton"
+                android:textColor="@color/dark_grey"
+                android:text="Female" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/pb_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/dark_grey"
+            android:text="PERSONAL BACKGROUND"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pb_id_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="ID NUMBERS"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.151"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_phone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

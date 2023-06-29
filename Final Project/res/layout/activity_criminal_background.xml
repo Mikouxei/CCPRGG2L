@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="409dp"
+    android:layout_height="729dp"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:fillViewport="true" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg1"
+        tools:context=".CriminalBackground">
+
+        <TextView
+            android:id="@+id/cb_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="LIST OF PREVIOUS CONVICTIONS"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cb_1_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="40dp"
+            android:text="1. Have you been found guilty\nof any administrative offense?"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.158"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_title" />
+
+        <RadioGroup
+            android:id="@+id/cb_1_radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="34dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_1_txtView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cb_1_txtView"
+            app:layout_constraintTop_toTopOf="@+id/cb_1_txtView">
+
+            <RadioButton
+                android:id="@+id/cb_1_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="check1"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/cb_1_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:onClick="check1"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                android:text="No" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/cb_1_detail"
+            android:layout_width="335dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:hint="If yes, please provide details."
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/lemon_chiffon"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.554"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_1_txtView" />
+
+        <TextView
+            android:id="@+id/cb_2_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="2. Have you been criminally\ncharged before any court?"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintStart_toStartOf="@+id/cb_1_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/cb_1_detail" />
+
+        <RadioGroup
+            android:id="@+id/cb_2_radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_2_txtView"
+            app:layout_constraintEnd_toEndOf="@+id/cb_1_radioGroup"
+            app:layout_constraintStart_toStartOf="@+id/cb_1_radioGroup"
+            app:layout_constraintTop_toTopOf="@+id/cb_2_txtView">
+
+            <RadioButton
+                android:id="@+id/cb_2_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="check2"
+                android:theme="@style/MyRadioButton"
+                android:textColor="@color/dark_grey"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/cb_2_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:onClick="check2"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                android:text="No" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/cb_2_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="16"
+            android:hint="If yes, please provide details."
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/lemon_chiffon"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.031"
+            app:layout_constraintStart_toStartOf="@+id/cb_2_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/cb_2_txtView" />
+
+        <TextView
+            android:id="@+id/cb_3_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="3. Have you ever been convicted\nof any crime or violation of any\nlaw, decree, ordinance or reg-\nulation by any court or tribunal?"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintStart_toStartOf="@+id/cb_2_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/cb_2_detail" />
+
+        <RadioGroup
+            android:id="@+id/cb_3_radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_3_txtView"
+            app:layout_constraintEnd_toEndOf="@+id/cb_2_radioGroup"
+            app:layout_constraintStart_toStartOf="@+id/cb_2_radioGroup"
+            app:layout_constraintTop_toTopOf="@+id/cb_3_txtView">
+
+            <RadioButton
+                android:id="@+id/cb_3_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="check3"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/cb_3_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:onClick="check3"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                android:text="No" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/cb_3_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="16"
+            android:hint="If yes, please provide details."
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/lemon_chiffon"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.031"
+            app:layout_constraintStart_toStartOf="@+id/cb_3_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/cb_3_txtView" />
+
+        <TextView
+            android:id="@+id/cb_4_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="4. Pursuant to:\n\n(a) Indigenous People's Act (RA 8371)\n(b) Magna Carta for Disabled Persons (RA 7277)\n(c) Solo Parents Welfare Act of (RA 8972).\n\nPlease answer the following items:"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cb_3_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/cb_3_detail" />
+
+        <TextView
+            android:id="@+id/cb_4a_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="a. Are you a member of any\nindigenous group?"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cb_4_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/cb_4_txtView" />
+
+        <RadioGroup
+            android:id="@+id/cb_4a_radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_4a_txtView"
+            app:layout_constraintEnd_toEndOf="@+id/cb_3_radioGroup"
+            app:layout_constraintTop_toTopOf="@+id/cb_4a_txtView">
+
+            <RadioButton
+                android:id="@+id/cb_4a_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="check4a"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/cb_4a_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:onClick="check4a"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                android:text="No" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/cb_4a_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="16"
+            android:hint="If yes, please provide details."
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/lemon_chiffon"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cb_4a_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/cb_4a_txtView" />
+
+        <TextView
+            android:id="@+id/cb_4b_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="b. Are you a person with\ndisability?"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cb_4a_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/cb_4a_detail" />
+
+        <RadioGroup
+            android:id="@+id/cb_4b_radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_4b_txtView"
+            app:layout_constraintEnd_toEndOf="@+id/cb_4a_radioGroup"
+            app:layout_constraintTop_toTopOf="@+id/cb_4b_txtView">
+
+            <RadioButton
+                android:id="@+id/cb_4b_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="check4b"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/cb_4b_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:onClick="check4b"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                android:text="No" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/cb_4b_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="16"
+            android:hint="If yes, please provide details."
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/lemon_chiffon"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cb_4b_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/cb_4b_txtView" />
+
+        <TextView
+            android:id="@+id/cb_4c_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="c. Are you a solo parent?"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cb_4b_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/cb_4b_detail" />
+
+        <RadioGroup
+            android:id="@+id/cb_4c_radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_4c_txtView"
+            app:layout_constraintEnd_toEndOf="@+id/cb_4b_radioGroup"
+            app:layout_constraintTop_toTopOf="@+id/cb_4c_txtView">
+
+            <RadioButton
+                android:id="@+id/cb_4c_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="check4c"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/cb_4c_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:onClick="check4c"
+                android:textColor="@color/dark_grey"
+                android:theme="@style/MyRadioButton"
+                android:text="No"/>
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/cb_4c_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/border"
+            android:elevation="5dp"
+            android:ems="16"
+            android:hint="If yes, please provide details."
+            android:inputType="text|textCapWords"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/lemon_chiffon"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cb_4c_txtView"
+            app:layout_constraintTop_toBottomOf="@+id/cb_4c_txtView" />
+
+        <Button
+            android:id="@+id/cb_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Submit"
+            android:elevation="20dp"
+            android:stateListAnimator="@null"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_4c_detail" />
+
+        <TextView
+            android:id="@+id/cb_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text=" "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_next" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
