@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/dark_grey</item>
+        <item name="colorControlActivated">@color/yellow</item>
+    </style>
+
+    <style name="MySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:background">@color/lemon_chiffon</item>
+    </style>
+
+</resources>
